@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZ Story Canvas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to GenZ Story Canvas</h1>
+        <div class="btn-container">
+            <a href="{{ url_for('story_canvas') }}" class="btn">Go to Story Canvas</a>
+        </div>
+
+        <!-- Horizontal Scroll Section -->
+        <section class="horizontal-scroll">
+            <h2>Featured Stories</h2>
+            <div class="scroll-container">
+                <div class="scroll-item">
+                    <img src="{{ url_for('static', filename='file.png') }}" alt="Story 1">
+                    <p>"Chasing sunsets and dreams"</p>
+                </div>
+                <div class="scroll-item">
+                    <img src="{{ url_for('static', filename='file (1).png') }}" alt="Story 2">
+                    <p>"Exploring🌍📸 #Wanderlust"</p>
+                </div>
+                <div class="scroll-item">
+                    <img src="{{ url_for('static', filename='file (2).png') }}" alt="Story 3">
+                    <p>"Living🎨💫 #ArtisticVibes"</p>
+                </div>
+                <div class="scroll-item">
+                    <img src="{{ url_for('static', filename='file (3).png') }}" alt="Story 4">
+                    <p>"Finding✨🌟 #LifeIsBeautiful"</p>
+                </div>
+                <div class="scroll-item">
+                    <img src="{{ url_for('static', filename='file.png') }}" alt="Story 5">
+                    <p>"one picture at a time 📷🌟"</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

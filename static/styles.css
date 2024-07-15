@@ -1,0 +1,211 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+/* Apply Background Image */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../static/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fully transparent background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    color: #333; /* Ensure text color is visible against background */
+}
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #6a5acd; /* Lavender color */
+    font-family: 'Pacifico', cursive;
+    animation: slideIn 1s ease-out;
+}
+
+/* Button Container */
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #6c63ff; /* Lavender Purple */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a54e0; /* Slightly darker shade of Lavender Purple */
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #4a43d0; /* Even darker shade of Lavender Purple */
+}
+
+/* Horizontal Scroll Section */
+.horizontal-scroll {
+    margin-top: 40px;
+}
+
+.horizontal-scroll h2 {
+    color: #6c63ff; /* Lavender Purple */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    width: 300px;
+    text-align: center;
+    background: #ffffff; /* White background for each item */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+.scroll-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.scroll-item p {
+    margin-top: 10px;
+    color: #333; /* Dark grey text */
+}
+
+/* Post Container */
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Post Styles */
+.post {
+    max-width: 200px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post p {
+    color: #333;
+    margin: 10px 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Custom File Upload Button */
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #6c63ff; /* Lavender Purple */
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload i {
+    margin-right: 8px;
+}
+
+/* Hide the default file input */
+#file-upload {
+    display: none;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #6c63ff; /* Lavender Purple */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a54e0; /* Slightly darker shade of Lavender Purple */
+}
+
+button:active {
+    background-color: #4a43d0; /* Even darker shade of Lavender Purple */
+}
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

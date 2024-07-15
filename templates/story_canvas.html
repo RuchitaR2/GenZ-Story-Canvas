@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Canvas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Story Canvas</h1>
+        <form action="{{ url_for('story_canvas') }}" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fas fa-plus"></i> Upload Image
+            </label>
+            <input id="file-upload" type="file" name="image" accept="image/*" required>
+            <input type="text" name="caption" placeholder="Enter caption here..." required>
+            <button type="submit">Post Story</button>
+        </form>
+    
+
+        <section class="horizontal-scroll">
+            <h2>All Stories</h2>
+            <div class="scroll-container">
+                {% for post in posts %}
+                    <div class="scroll-item">
+                        <img src="{{ url_for('static', filename=post['image'].split('/')[-1]) }}" alt="Story Image">
+                        <p>{{ post['caption'] }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</body>
+</html>
